@@ -1,12 +1,12 @@
 import { NativeModules, Platform } from 'react-native';
 const invariant = require('invariant');
 // const RNCookieManagerIOS = NativeModules.RNCookieManagerIOS;
-const TenjinRnAndroid = NativeModules.RNCookieManagerAndroid;
+const TenjinRnAndroid = NativeModules.TenjinRnAndroid;
 
 let TenjinRn;
 
 if (Platform.OS === 'ios') {
-  console.log('ios currently not supported')
+  console.log('ios currently not supported');
   // invariant(
   //   RNCookieManagerIOS,
   //   '@react-native-community/cookies: Add RNCookieManagerIOS.h and RNCookieManagerIOS.m to your Xcode project',

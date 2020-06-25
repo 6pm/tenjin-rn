@@ -54,7 +54,7 @@ public class TenjinModule extends ReactContextBaseJavaModule {
     }
 
     public String getName() {
-        return "RNCookieManagerAndroid";
+        return "TenjinRnAndroid";
     }
 
     @ReactMethod
