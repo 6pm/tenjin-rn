@@ -51,22 +51,23 @@ public class TenjinModule extends ReactContextBaseJavaModule {
 
     TenjinSDK tenjinInstance;
     private void initTenjin() {
-        try {
-            String apiKey = getString(R.string.TENJIN_KEY);
+        System.out.println("Tenjin done");
+        // try {
+        //     String apiKey = getString(R.string.TENJIN_KEY);
 
-            if(apiKey == "null") {
-                System.out.println("Tenjin not initialized - no key in gradle.properties");
-            } else {
-                tenjinInstance = TenjinSDK.getInstance(this, apiKey);
-                tenjinInstance.connect();
-            }
-        }
+        //     if(apiKey == "null") {
+        //         System.out.println("Tenjin not initialized - no key in gradle.properties");
+        //     } else {
+        //         tenjinInstance = TenjinSDK.getInstance(this, apiKey);
+        //         tenjinInstance.connect();
+        //     }
+        // }
 
-        catch (Exception e) {
-            e.printStackTrace();
+        // catch (Exception e) {
+        //     e.printStackTrace();
 
-            System.out.println("Tenjin not initialized - no key in gradle.properties");
-        }
+        //     System.out.println("Tenjin not initialized - no key in gradle.properties");
+        // }
     }
 
     // public void sendTenjinPurchaseEvent(String sku, String purchaseData, String dataSignature, Double price, String currencyCode) {
