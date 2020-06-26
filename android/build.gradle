@@ -51,6 +51,7 @@ android {
         targetSdkVersion safeExtGet('targetSdkVersion', DEFAULT_TARGET_SDK_VERSION)
         versionCode 1
         versionName "1.0"
+        resValue "string", "TENJIN_KEY", TENJIN_KEY
     }
     lintOptions {
         abortOnError false
@@ -73,8 +74,14 @@ repositories {
 }
 
 dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+
+    implementation 'com.google.android.gms:play-services-analytics:17.0.0'
+    implementation 'com.android.installreferrer:installreferrer:1.1.2'
+
+    compile project(":tenjin")
 }
 
 def configureReactNativePom(def pom) {
